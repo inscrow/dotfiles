@@ -1,0 +1,21 @@
+syntax off
+set backspace=indent,eol,start
+filetype plugin indent on
+
+set autoindent
+set autowrite
+set incsearch hlsearch ignorecase smartcase
+set ruler
+set showcmd
+set showmatch
+set wildmenu
+
+set encoding=utf-8
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set background=dark
+set termguicolors
+colo gruvbox
+
+nnoremap <C-L> <Cmd>nohlsearch\|diffupdate<CR><C-L>

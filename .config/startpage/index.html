@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Startpage</title>
+		<style>
+			html {
+				align-items: center;
+				background-color: #282828;
+				color: #ebdbb2;
+				display: flex;
+				font: 14px "Courier New", Courier, monospace;
+				height: 100%;
+				justify-content: center;
+				margin: 0;
+			}
+			body {
+				display: flex;
+				margin: 1em;
+				padding: 1em;
+			}
+			h1 {
+				font-size: 2em;
+				grid-column: 1 / -1;
+				margin: 0;
+				text-align: center;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			a:focus,
+			a:hover {
+				color: #b16286;
+			}
+			nav {
+				display: grid;
+				grid-row-gap; 1em;
+				grid-template-columns: 1fr 1fr 1fr;
+				margin: 0 1em;
+				min-width: 24em;
+				padding: 1em 0;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				white-space: nowrap;
+			}
+			li:first-child {
+				font-weight: bold;
+				line-height: 2em;
+			}
+			img {
+				border: 2px solid #b16286;
+				height: auto;
+				object-fit: cover;
+				object-position: 50% 100%;
+				width: 14em;
+			}
+		</style>
+	</head>
+	<body>
+
+		<nav>
+			<h1>Cool, eh?</h1>
+			<ul>
+				<li>Blog</li>
+				<li><a href="https://jvns.ca/">jvns</a></li>
+			</ul>
+			<ul>
+				<li>Learn</li>
+				<li><a href="https://doc.rust-lang.org/book/">rust docs</a></li>
+				<li><a href="http://automatetheboringstuff.com/">automate</a></li>
+				<li><a href="https://github.com/inscrow/coding-interview-university">coding interview material</a></li>
+			</ul>
+			<ul>
+				<li>Fun</li>
+				<li><a href="https://www.reddit.com/">reddit</a></li>
+				<li><a href="https://www.youtube.com/">youtube</a></li>
+			</ul>
+			<ul>
+				<li>Books</li>
+				<li><a href="https://www.goodreads.com/">goodreads</a></li>
+			</ul>
+			<ul>
+				<li>News</li>
+				<li><a href="https://news.ycombinator.com/">hackernews</a></li>
+			</ul>
+			<ul>
+				<li>Music</li>
+				<li><a href="https://open.spotify.com/">spotify</a></li>
+			</ul>
+		</nav>
+
+		<img src="gengar.jpg">
+	</body>
+</html>
+<!-- vim: set shiftwidth=2 tabstop=2: -->
