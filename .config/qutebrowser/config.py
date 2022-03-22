@@ -1,15 +1,34 @@
 # load default options before modifying them
 config.load_autoconfig()
 
+# command aliases
+c.aliases = {
+        'src': 'config-source',
+        'ce': 'config-edit'
+}
+
 # don't show scrollbars
-c.scrolling.bar = "never"
+c.scrolling.bar = 'never'
+
+c.content.geolocation = False
+
+# wait 2 seconds and then delete finished downlaods
+c.downloads.remove_finished = 2000
+
+c.downloads.location.directory = '/home/rick/'
+
+# display PDFs in browser
+c.content.pdfjs = True
+
+# editor command to use
+c.editor.command = ['st', '-e', 'nvim', '{file}']
 
 # set keybindings
 config.bind(',v', 'spawn mpv {url}')
 home_keys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
 for i, key in enumerate(home_keys):
     config.bind(',' + key, 'tab-focus ' + str(i + 1))
-config.bind(',;', 'tab-focus 1 ;; tab-prev')
+config.bind(',;', 'tab-focus -1')
 
 config.bind(',V', 'hint links spawn mpv {hint-url}')
 config.bind(',y', 'hint links yank')
