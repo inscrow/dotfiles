@@ -1,9 +1,11 @@
+let g:mapleader = ','
 runtime plug.vim
 
 " options
 set autoindent
 set autowrite
 set backspace=indent,eol,start
+set clipboard=unnamed
 set colorcolumn=80
 set encoding=utf-8 fileencoding=utf-8
 set hlsearch ignorecase incsearch smartcase
@@ -20,4 +22,6 @@ syntax enable
 set termguicolors
 colo gruvbox
 
-let g:mapleader = ','
+" transparency
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE

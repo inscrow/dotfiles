@@ -1,5 +1,6 @@
 #!/bin/bash
 
+xcompmgr -cf &
 ~/.fehbg &
 touchpad_toggle.sh &
 dunst &
