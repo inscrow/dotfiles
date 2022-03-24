@@ -23,17 +23,22 @@ c.content.pdfjs = True
 # editor command to use
 c.editor.command = ['st', '-e', 'nvim', '{file}']
 
-# set keybindings
-config.bind(',v', 'spawn mpv {url}')
+# tab change keybindings
 home_keys = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
 for i, key in enumerate(home_keys):
     config.bind(',' + key, 'tab-focus ' + str(i + 1))
 config.bind(',;', 'tab-focus -1')
 
+# video playing commands
+config.bind(',v', 'spawn mpv {url}')
 config.bind(',V', 'hint links spawn mpv {hint-url}')
+config.bind(',p', 'hint links spawn add-playlist {hint-url}')
+
 config.bind(',y', 'hint links yank')
 
-config.bind(',p', 'hint links spawn add-playlist {hint-url}')
+# switch F and ;f keybindings
+config.bind('F', 'hint links tab-fg')
+config.bind(';f', 'hint links tab-bg')
 
 # colors
 black     = "#ebdbb2"
