@@ -12,3 +12,9 @@ alias v="$EDITOR"
 
 # cd automatically
 setopt AUTOCD
+
+# start completion
+autoload -Uz compinit && compinit
+
+# case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
