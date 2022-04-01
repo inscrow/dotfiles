@@ -10,7 +10,7 @@ endif
 call plug#begin()
 Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-sensible'
-Plug 'morhetz/gruvbox'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

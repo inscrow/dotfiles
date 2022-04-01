@@ -13,6 +13,7 @@ set nowrap
 set number relativenumber
 set ruler
 set scrolloff=5
+set shell=fish
 set showcmd
 set showmatch
 set wildmenu
@@ -25,3 +26,6 @@ colo gruvbox
 " transparency
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
+
+" file types
+au BufNewFile,BufRead *.fish set filetype=fish

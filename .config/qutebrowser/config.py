@@ -49,8 +49,13 @@ red       = "#cc241d"
 white     = "#282828"
 yellow    = "#d79921"
 
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.darkmode.policy.images = 'smart'
+# c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.algorithm = "lightness-hsl"
+# c.colors.webpage.darkmode.threshold.text = 150
+# c.colors.webpage.darkmode.threshold.background = 205
+# c.colors.webpage.darkmode.policy.images = "never"
+# c.colors.webpage.darkmode.policy.page = "smart"
+c.colors.webpage.preferred_color_scheme = "dark"
 
 # completion menu
 c.colors.completion.category.bg = magenta

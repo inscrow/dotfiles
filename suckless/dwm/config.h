@@ -5,19 +5,26 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "Hack Nerd Font:size=8", "Sazanami Mincho:size=8" };
 static const char dmenufont[]       = "Hack Nerd Font:size=8";
-static const char col_gray1[]       = "#1d2021";
-static const char col_gray2[]       = "#282828";
+static const char col_gray1[]       = "#000000";
+static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#1d2021";
-static const char col_cyan[]        = "#b16286";
+static const char col_cyan[]        = "#bd856a";
+static const unsigned int baralpha = 0x80;
+static const unsigned int borderalpha = 0x80;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, OPAQUE, OPAQUE },
 };
 
 /* tagging */
@@ -28,15 +35,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "qutebrowser", NULL,    NULL,       2,            0,           -1 },
-	{ "Gimp",        NULL,    NULL,      16,            1,           -1 },
+	/* class      instance    title      tags mask     isfloating   monitor */
+	{ "qutebrowser", NULL,    NULL,      1 << 0,         0,           -1 },
+	{ "Gimp",        NULL,    NULL,      1 << 8,         1,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
