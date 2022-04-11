@@ -1,17 +1,19 @@
 let g:mapleader = ','
-runtime plug.vim
+runtime! plug.vim
+runtime! cmds.vim " some commands I defined
+
+" add matchit plugin
+packadd! matchit
 
 " options
 set autoindent
 set autowrite
-set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard=unnamedplus
 set colorcolumn=80
-set encoding=utf-8 fileencoding=utf-8
-set hlsearch ignorecase incsearch smartcase
+set fileencoding=utf-8
+set hlsearch ignorecase smartcase
 set nowrap
 set number relativenumber
-set ruler
 set scrolloff=5
 set shell=fish
 set showcmd
@@ -22,10 +24,25 @@ set wildmenu
 syntax enable
 set termguicolors
 colo gruvbox
+set guicursor=a:blinkon100,i:ver20
 
 " transparency
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
+augroup Transparent
+  au!
+  au ColorScheme * hi! Normal ctermbg=NONE guibg=NONE guifg=#000000
+  au ColorScheme * hi! NonText ctermbg=NONE guibg=NONE
+augroup END
 
 " file types
-au BufNewFile,BufRead *.fish set filetype=fish
+augroup FileTypes
+  au!
+  au BufNewFile,BufRead *.fish set filetype=fish
+augroup END
+
+" skeletons
+augroup Skeletons
+  au!
+  au BufNewFile *.vim r ~/.config/nvim/skeletons/skel.vim | norm gg
+augroup END
+
+" vim:set ft=vim sw=2:

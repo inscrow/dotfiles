@@ -2,7 +2,7 @@ require'nvim-treesitter.configs'.setup {
 	ensure_installed = { "c", "cpp", "python", "fish", "java", "javascript", "html", "make", "lua", "vim", "typescript", "tsx", "css" },
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = false,
+		-- additional_vim_regex_highlighting = false,
 	},
 	incremental_selection = {
 		enalbe = true,

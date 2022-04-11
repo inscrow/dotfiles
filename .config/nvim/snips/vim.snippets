@@ -1,0 +1,18 @@
+snippet aug
+augroup ${1:groupname}
+	au!
+	${2:autocmds}
+augroup END
+endsnippet
+
+snippet fu
+function ${1:funcname}(${2:args}) abort
+	${3:body}
+endfunction
+endsnippet
+
+snippet if
+if ${1:condition}
+	${2:code}
+endif
+endsnippet
