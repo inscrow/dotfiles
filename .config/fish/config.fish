@@ -1,19 +1,13 @@
 if status is-interactive
-	# aliases
-	alias dots "/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME"
-	complete dots --wraps git
-	alias ls "ls --color=always"
-	alias qutec "$EDITOR ~/.config/qutebrowser/config.py"
-	alias spc "$EDITOR ~/.config/startpage/index.html"
-	alias src "source ~/.config/fish/config.fish"
-	alias v "nvim"
-	alias vc "$EDITOR ~/.config/nvim/init.vim"
-
+	# for aliases, look in ./functions directory
 	# greeter function
-	function fish_greeting
-		set color "\033[48;2;189;133;106m"
-		echo -e "$color ゲンガー \033[0m"
-	end
+	# function fish_greeting
+	# 	set color "\033[48;2;189;133;106m"
+	# 	echo -e "$color ゲンガー \033[0m"
+	# end
+	set fish_greeting # disable greeter
+
+	zoxide init fish | source
 end
 
 if status --is-login
