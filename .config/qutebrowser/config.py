@@ -40,13 +40,16 @@ config.bind(',y', 'hint links yank')
 config.bind('F', 'hint links tab-fg')
 config.bind(';f', 'hint links tab-bg')
 
+# clear search highlights
+config.bind('<Ctrl-l>', 'search')
+
 # colors
-black     = "#ebdbb2"
+black     = "#000000"
 magenta   = "#b16286"
 green     = "#98971a"
-highlight = "#1d2021"
+highlight = "#bd856a"
 red       = "#cc241d"
-white     = "#282828"
+white     = "#ffffff"
 yellow    = "#d79921"
 
 # c.colors.webpage.darkmode.enabled = True
@@ -55,7 +58,7 @@ yellow    = "#d79921"
 # c.colors.webpage.darkmode.threshold.background = 205
 # c.colors.webpage.darkmode.policy.images = "never"
 # c.colors.webpage.darkmode.policy.page = "smart"
-c.colors.webpage.preferred_color_scheme = "dark"
+# c.colors.webpage.preferred_color_scheme = "dark"
 
 # completion menu
 c.colors.completion.category.bg = magenta
@@ -146,7 +149,14 @@ c.colors.statusbar.url.error.fg = red
 c.colors.statusbar.url.fg = black
 c.colors.statusbar.url.hover.fg = magenta
 
-c.statusbar.show = "in-mode"
+c.colors.statusbar.progress.bg = black
+c.colors.statusbar.url.success.http.fg = green
+c.colors.statusbar.url.success.https.fg = green
+c.colors.statusbar.url.hover.fg = magenta
+
+c.statusbar.position = "bottom"
+c.statusbar.show = "always"
+c.statusbar.widgets = ['progress', 'keypress', 'url', 'history', 'scroll']
 
 # tabs
 c.colors.tabs.bar.bg = white
@@ -159,6 +169,9 @@ c.colors.tabs.selected.even.bg = highlight
 c.colors.tabs.selected.even.fg = black
 c.colors.tabs.selected.odd.bg = highlight
 c.colors.tabs.selected.odd.fg = black
+
+c.tabs.position = "bottom"
+c.tabs.show = "multiple"
 
 # startpage
 c.url.start_pages = '/home/rick/.config/startpage/index.html'

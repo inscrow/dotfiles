@@ -94,29 +94,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.5;
+float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	[0] = "#000000", /* norm contrast: #282828 / soft contrast: #32302f */
+	[0] = "#ffffff", /* hard contrast: #f9f5d7 / soft contrast: #f2e5bc */
 	[1] = "#cc241d", /* red     */
 	[2] = "#98971a", /* green   */
 	[3] = "#d79921", /* yellow  */
 	[4] = "#458588", /* blue    */
 	[5] = "#b16286", /* magenta */
 	[6] = "#689d6a", /* cyan    */
-	[7] = "#a89984", /* white   */
+	[7] = "#7c6f64", /* white   */
 
 	/* 8 bright colors */
 	[8]  = "#928374", /* black   */
-	[9]  = "#fb4934", /* red     */
-	[10] = "#b8bb26", /* green   */
-	[11] = "#fabd2f", /* yellow  */
-	[12] = "#83a598", /* blue    */
-	[13] = "#d3869b", /* magenta */
-	[14] = "#8ec07c", /* cyan    */
-	[15] = "#ebdbb2", /* white   */
+	[9]  = "#9d0006", /* red     */
+	[10] = "#79740e", /* green   */
+	[11] = "#b57614", /* yellow  */
+	[12] = "#076678", /* blue    */
+	[13] = "#8f3f71", /* magenta */
+	[14] = "#427b58", /* cyan    */
+	[15] = "#000000", /* white   */
 };
 
 
@@ -130,13 +130,20 @@ unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
 
 /*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
+ * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
+ * Default style of cursor
+ * 0: blinking block
+ * 1: blinking block (default)
+ * 2: steady block ("█")
+ * 3: blinking underline
+ * 4: steady underline ("_")
+ * 5: blinking bar
+ * 6: steady bar ("|")
+ * 7: blinking st cursor
+ * 8: steady st cursor
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorstyle = 1;
+static Rune stcursor = 0x2603; /* snowman ("☃") */
 
 /*
  * Default columns and rows numbers
