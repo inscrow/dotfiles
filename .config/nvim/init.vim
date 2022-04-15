@@ -15,7 +15,7 @@ set hlsearch ignorecase smartcase
 set nowrap
 set number relativenumber
 set scrolloff=5
-set shell=fish
+set shell=zsh
 set showcmd
 set showmatch
 set wildmenu
@@ -26,11 +26,11 @@ set termguicolors
 colo gruvbox
 set guicursor=a:blinkon100,i:ver20
 
-" transparency
-augroup Transparent
+" fix some colorscheme issues
+augroup FixColorscheme
   au!
-  au ColorScheme * hi! Normal ctermbg=NONE guibg=NONE guifg=#000000
-  au ColorScheme * hi! NonText ctermbg=NONE guibg=NONE
+  au ColorScheme * hi! Normal guibg=NONE guifg=#000000
+  au ColorScheme * hi! NonText guibg=NONE
 augroup END
 
 " file types
@@ -43,6 +43,11 @@ augroup END
 augroup Skeletons
   au!
   au BufNewFile *.vim r ~/.config/nvim/skeletons/skel.vim | norm gg
+augroup END
+
+augroup FTOptions
+  au!
+  au BufRead *.md,*.txt set tw=79
 augroup END
 
 " vim:set ft=vim sw=2:

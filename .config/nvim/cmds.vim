@@ -40,5 +40,12 @@ function Badd(filelist) abort
 endfunction
 command! -nargs=1 -complete=file Open call Open(split(expand('<args>')))
 " }}}
+" Compile current single C/C++ file {{{1
+command! Gcc !gcc % -o %:r -Wall -Wextra -pedantic -Wmismatched-dealloc
+command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
+" }}}
+" Run Python script
+command! Py !python3 %
+" }}}
 
 " vim: set ft=vim sw=2 fdm=marker:

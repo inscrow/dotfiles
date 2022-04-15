@@ -1,6 +1,7 @@
 #!/bin/bash
 
-picom --experimental-backend --blur-background --blur-method="kawase" &
+unclutter &
+xcompmgr -n &
 ~/.fehbg &
 touchpad_toggle.sh &
 dunst &
