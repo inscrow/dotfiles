@@ -1,6 +1,8 @@
 # completion
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
+	'+l:|?=** r:|?=**'
 
 # aliases
 alias dots='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
