@@ -22,7 +22,18 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats ' %s(%F{red}%b%f)'
 precmd() { vcs_info }
 setopt prompt_subst
-PROMPT='%n@%m %F{red}%1~%f${vcs_info_msg_0_} > '
+PROMPT='<>{ %F{red}%1~%f${vcs_info_msg_0_} }<> '
 
 # enable zoxide
 eval "$(zoxide init zsh)"
+
+# enable line editing in $EDITOR
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^E" edit-command-line
+
+# functions
+function img2wall {
+	convert "$1" -resize 1366x768^ -gravity center \
+		-extent 1366x768 wall-"${1/\.*}".png
+}
