@@ -1,0 +1,22 @@
+snippet incstd
+#include <iostream>
+#include <stdlib.h>
+endsnippet
+
+snippet main
+int main(void)
+{
+	${1:body}
+
+	return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet maina
+int main(int argc, char *argv[])
+{
+	${1:body}
+
+	return EXIT_SUCCESS;
+}
+endsnippet

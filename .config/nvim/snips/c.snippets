@@ -1,0 +1,46 @@
+snippet incstd
+#include <stdio.h>
+#include <stdlib.h>
+endsnippet
+
+snippet inc
+#include <$1.h>
+endsnippet
+
+snippet main
+int main(void)
+{
+	${1:// body}
+
+	return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet maina
+int main(int argc, char *argv[])
+{
+	${1:// body}
+
+	return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet func
+${1:return_type} ${2:function_name}(${3:arguments});
+$1 $2($3)
+{
+	${4:// body}
+}
+endsnippet
+
+snippet struct
+struct ${1:struct_name} {
+	${2:// struct data}
+};
+endsnippet
+
+snippet type
+typedef struct ${1:struct_name} {
+	${2:// struct data}
+} ${3:type_name};
+endsnippet
