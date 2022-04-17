@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+	xsetroot -name "$(status-msg)"
+	sleep 5
+done

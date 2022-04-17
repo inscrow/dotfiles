@@ -1,0 +1,6 @@
+#!/bin/bash
+
+play="mpv --playlist=/tmp/playlist"
+end="cat /dev/null >/tmp/playlist && notify-send 'Playlist' 'Finished playing... deleted all videos'"
+
+$play; $end

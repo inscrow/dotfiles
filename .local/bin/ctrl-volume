@@ -1,0 +1,27 @@
+#!/bin/sh
+
+WHICH="$1"
+OPERATION="$2"
+
+case $WHICH in
+        (in) WHICH='source';;
+        (out) WHICH='sink';;
+	(*) echo "I need in or out" && exit;;
+esac
+
+case $OPERATION in
+        (-inc) OPERATION="+5%"
+		TARGET="volume";;
+        (-dec) OPERATION="-5%"
+		TARGET="volume";;
+	(-mute) OPERATION="toggle"
+		TARGET="mute";;
+	(*) echo "I need an operation (-inc|-dec|-mute)" && exit;;
+esac
+
+default="@DEFAULT_$(echo $WHICH | tr '[:lower:]' '[:upper:]')@"
+
+pactl set-"$WHICH"-"$TARGET" $default "$OPERATION"
+
+volume="$(pactl get-${WHICH}-volume $default | grep -o -e '[[:digit:]]\+%' | uniq)"
+notify-send "${WHICH}" "Volume: ${volume}\n$(pactl get-${WHICH}-mute $default)"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+touch /tmp/playlist
+echo "$1" >>/tmp/playlist

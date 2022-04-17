@@ -1,0 +1,9 @@
+#!/bin/bash
+
+open_cmd="$HOME/prog/automate/open_tutorial.py -d $HOME/prog/automate"
+num=$(echo '' | dmenu -p 'tutorial number: ')
+
+# close when there's no input
+[[ "x$num" = "x" ]] && exit
+
+$open_cmd $num

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf "shutdown now\nreboot" | dmenu -p "Power menu:" | sh

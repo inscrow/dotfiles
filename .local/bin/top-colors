@@ -1,0 +1,14 @@
+#!/bin/bash
+
+hex2dec() {
+	hex="$1"
+	printf "%d;%d;%d" 0x${hex:1:2} 0x${hex:3:2} 0x${hex:5:2}
+}
+
+img="$1"
+colors="$(convert $img -colors 8 -format "%c" histogram:info: | awk '{print $3}')"
+nc="\e[0m"
+
+for c in $colors; do
+	echo -e "\e[48;2;$(hex2dec $c)m $c $nc"
+done

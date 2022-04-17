@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DIR="$HOME"/docs/.diary
+
+[ ! -d "$DIR" ] && mkdir -p "$DIR"
+
+DATE="$(date +'%Y-%m-%d')"
+TIME="$(date +'%H:%M')"
+FILE="$DIR/$DATE.txt"
+
+[ -f $FILE ] &&
+	echo -e "\n> $TIME\n" >>$FILE || 
+	echo -e "> $TIME\n" >>$FILE
+
+"$EDITOR" + "$FILE"

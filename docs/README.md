@@ -32,11 +32,10 @@ the status bar.  For the Japanese numbers I use Sazanami Mincho.
 ## Screenshots
 
 ![](/docs/screenshots/screen-2022-04-17-19-33_full.png)
-![](/docs/screenshots/screen-2022-04-17-21-57_full_000.png)
-
-<hr>
 
 [Wallpaper from GUWEIZ](https://wallhaven.cc/w/1kj9o3)
+
+![](/docs/screenshots/screen-2022-04-17-21-57_full_000.png)
 
 ## List of programs I use
 

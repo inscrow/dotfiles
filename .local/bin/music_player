@@ -1,0 +1,8 @@
+#!/bin/bash
+
+playlist="$(ls ~/media/music/*.m4a | cut -d '/' -f 6 | dmenu -l 20)"
+
+# close immediately if there's no playlist
+[[ x$playlist = x ]] && exit
+
+mpv ~/media/music/"$playlist"
