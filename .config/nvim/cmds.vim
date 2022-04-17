@@ -31,6 +31,9 @@ function Rename(newname)
 endfunction
 command! -nargs=1 Rename call Rename(expand('<args>'))
 " }}}
+" ChmodX {{{1
+command! ChmodX call system('!chmod +x ' . expand('%')) | edit
+" }}}
 " Load multiple buffers {{{1
 function Badd(filelist) abort
   for file in a:filelist
@@ -41,10 +44,23 @@ endfunction
 command! -nargs=1 -complete=file Open call Open(split(expand('<args>')))
 " }}}
 " Compile current single C/C++ file {{{1
-command! Gcc !gcc % -o %:r -Wall -Wextra -pedantic -Wmismatched-dealloc
+function Gcc() abort
+  " TODO errorformat to output the function correctly
+  let cmd = 'gcc ' . expand('%') . ' -o ' . expand('%:r') . ' -Wall -Wextra -pedantic -Wmismatched-dealloc'
+  let el = systemlist(cmd)
+  call setqflist(getqflist({'lines': el})['items'])
+endfunction
+command! Gcc call Gcc()
+
+function Gpp() abort
+  " TODO errorformat to output the function correctly
+  let cmd = 'g++ ' . expand('%') . ' -o ' . expand('%:r') . ' -Wall -Wextra -pedantic'
+  let el = systemlist(cmd)
+  call setqflist(getqflist({'lines': el})['items'])
+endfunction
 command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
 " }}}
-" Run Python script
+" Run Python script {{{1
 command! Py !python3 %
 " }}}
 
