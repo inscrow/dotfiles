@@ -1,3 +1,6 @@
+# change zsh directory to ~/.config/zsh
+export ZDOTDIR="$HOME/.config/zsh/"
+
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
 export BROWSER="qutebrowser"

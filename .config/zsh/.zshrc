@@ -22,7 +22,7 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats ' %s(%F{red}%b%f)'
 precmd() { vcs_info }
 setopt prompt_subst
-PROMPT='<>{ %F{red}%1~%f${vcs_info_msg_0_} }<> '
+PROMPT='%B<>{%b %F{red}%1~%f${vcs_info_msg_0_} %B}<>%b '
 
 # enable zoxide
 eval "$(zoxide init zsh)"
