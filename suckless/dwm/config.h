@@ -133,6 +133,8 @@ static Key keys[] = {
 	{ 0,        XF86XK_MonBrightnessDown,      spawn,          SHCMD("xbacklight -5") },
 	{ 0,              XF86XK_ScreenSaver,      spawn,          SHCMD("i3lock -i $HOME/.config/wallpaper.png") },
 	{ 0,           XF86XK_TouchpadToggle,      spawn,          SHCMD("touchpad_toggle.sh") },
+	{ 0,                        XK_Print,      spawn,          SHCMD("screenshot -u") },
+	{ ShiftMask,                XK_Print,      spawn,          SHCMD("screenshot -f") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("music_player") },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("open_tutorial") },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("play-list") },

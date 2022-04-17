@@ -1,0 +1,17 @@
+#!/bin/bash
+
+getopts 'uf' OPT
+
+case $OPT in
+	u)
+		scrot -u $HOME'/media/pics/screen-%Y-%m-%d_$wx$h.png'
+		notify-send 'Screenshot taken'
+		;;
+	f)
+		scrot $HOME'/media/pics/screen-%Y-%m-%d_full.png'
+		notify-send 'Screenshot taken'
+		;;
+	*)
+		echo 'Either use option -u (focuse client) of -f (fullscreen)'
+		;;
+esac
