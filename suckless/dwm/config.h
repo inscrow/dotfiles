@@ -40,6 +40,7 @@ static const Rule rules[] = {
 	{ "qutebrowser", NULL,    NULL,      1 << 0,         0,         0,           0,          -1 },
 	{ "Gimp",        NULL,    NULL,      1 << 8,         1,         0,           0,          -1 },
 	{ "mpv",         NULL,    NULL,      1 << 3,         0,         0,           0,          -1 },
+	{ "ROOT",        NULL,    NULL,         0,           1,         0,           1,          -1 },
 	{ "St",          NULL,    NULL,         0,           0,         1,           0,          -1 },
 	{ "st-256color", NULL,    NULL,         0,           0,         1,           0,          -1 },
 };

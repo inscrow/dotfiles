@@ -1,6 +1,6 @@
 # dotfiles
 
-These are my dotfiles for my laptop running Arch Linux.
+These are the dotfiles I use on my Linux laptop.
 
 ## Info
 
@@ -33,7 +33,7 @@ the status bar.  For the Japanese numbers I use Sazanami Mincho.
 
 ![](/docs/screenshots/screen-2022-04-17-19-33_full.png)
 
-[Wallpaper from GUWEIZ](https://wallhaven.cc/w/1kj9o3)
+[Wallpaper](https://wallhaven.cc/w/1kj9o3)
 
 ![](/docs/screenshots/screen-2022-04-17-21-57_full_000.png)
 
@@ -47,6 +47,9 @@ the status bar.  For the Japanese numbers I use Sazanami Mincho.
 * Shell: [zsh](https://www.zsh.org/)
 * Media Player: [mpv](https://mpv.io/)
 * Document Reader: [zathura](https://pwmt.org/projects/zathura/)
+* Notification Daemon: [dunst](https://dunst-project.org/)
+* Data Processing: [root](https://root.cern.ch/)
+* Compositor: xcompmgr
 
 ## st patches
 
