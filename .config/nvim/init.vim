@@ -2,6 +2,35 @@ let g:mapleader = ','
 runtime! plug.vim
 runtime! cmds.vim " some commands I defined
 
+" fix some colorscheme issues
+function! MyHighlights() abort
+  hi Normal guibg=NONE guifg=#000000
+  hi NonText guibg=NONE
+endfunction
+augroup FixColorscheme
+  au!
+  au ColorScheme gruvbox call MyHighlights()
+augroup END
+
+" file types
+let g:do_filetype_lua = 1 " use filetype.lua (faster)
+let g:did_load_filetypes = 0 " don't use filetype.vim (slow)
+augroup FileTypes
+  au!
+  au BufNewFile,BufRead *.fish set filetype=fish
+augroup END
+
+" skeletons
+augroup Skeletons
+  au!
+  au BufNewFile *.vim r ~/.config/nvim/skeletons/skel.vim | norm gg
+augroup END
+
+augroup FTOptions
+  au!
+  au BufRead *.md,*.txt set tw=79
+augroup END
+
 " add matchit plugin
 packadd! matchit
 
@@ -22,32 +51,7 @@ set wildmenu
 
 " colors
 syntax enable
-set termguicolors
+set termguicolors background=light
 colo gruvbox
 set guicursor=a:blinkon100,i:ver20
-
-" fix some colorscheme issues
-augroup FixColorscheme
-  au!
-  au ColorScheme * hi! Normal guibg=NONE guifg=#000000
-  au ColorScheme * hi! NonText guibg=NONE
-augroup END
-
-" file types
-augroup FileTypes
-  au!
-  au BufNewFile,BufRead *.fish set filetype=fish
-augroup END
-
-" skeletons
-augroup Skeletons
-  au!
-  au BufNewFile *.vim r ~/.config/nvim/skeletons/skel.vim | norm gg
-augroup END
-
-augroup FTOptions
-  au!
-  au BufRead *.md,*.txt set tw=79
-augroup END
-
 " vim:set ft=vim sw=2:

@@ -34,6 +34,9 @@ command! -nargs=1 Rename call Rename(expand('<args>'))
 " ChmodX {{{1
 command! ChmodX call system('!chmod +x ' . expand('%')) | edit
 " }}}
+" Mkdir {{{1
+command! -nargs=1 Mkdir !mkdir <args>
+" }}}
 " Load multiple buffers {{{1
 function Badd(filelist) abort
   for file in a:filelist
