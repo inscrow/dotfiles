@@ -1,3 +1,11 @@
+# some tmux magic
+if [[ -z "$TMUX" && -z "$VIM" && -z "$NVIM" ]]; then
+	if [[ "$ZSH_TMUX_AUTOSTARTED" != "true" ]]; then
+		export ZSH_TMUX_AUTOSTARTED=true
+		tmux
+	fi
+fi
+
 # completion
 autoload -Uz compinit
 compinit
