@@ -35,7 +35,7 @@ the status bar.  For the Japanese numbers I use Sazanami Mincho.
 
 [Wallpaper](https://wallhaven.cc/w/1kj9o3)
 
-![](/docs/screenshots/screen-2022-04-17-21-57_full_000.png)
+![](/docs/screenshots/screen-2022-04-23-16-00_full_000.png)
 
 ## List of programs I use
 
@@ -50,6 +50,7 @@ the status bar.  For the Japanese numbers I use Sazanami Mincho.
 * Notification Daemon: [dunst](https://dunst-project.org/)
 * Data Processing: [root](https://root.cern.ch/)
 * Compositor: xcompmgr
+* Multiplexer: [tmux](https://github.com/tmux/tmux)
 
 ## st patches
 
