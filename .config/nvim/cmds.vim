@@ -48,18 +48,34 @@ command! -nargs=1 -complete=file Open call Open(split(expand('<args>')))
 " }}}
 " Compile current single C/C++ file {{{1
 function Gcc() abort
+  if &autowrite
+    write
+  endif
   " TODO errorformat to output the function correctly
   let cmd = 'gcc ' . expand('%') . ' -o ' . expand('%:r') . ' -Wall -Wextra -pedantic -Wmismatched-dealloc'
   let el = systemlist(cmd)
   call setqflist(getqflist({'lines': el})['items'])
+
+  " show message if there's a compilation error
+  if !empty(getqflist())
+    echo "Compilation failed, errors found"
+  endif
 endfunction
 command! Gcc call Gcc()
 
 function Gpp() abort
+  if &autowrite
+    write
+  endif
   " TODO errorformat to output the function correctly
   let cmd = 'g++ ' . expand('%') . ' -o ' . expand('%:r') . ' -Wall -Wextra -pedantic'
   let el = systemlist(cmd)
   call setqflist(getqflist({'lines': el})['items'])
+
+  " show message if there's a compilation error
+  if !empty(getqflist())
+    echo "Compilation failed, errors found"
+  endif
 endfunction
 command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
 " }}}
