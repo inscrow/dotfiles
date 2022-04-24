@@ -26,8 +26,9 @@ color.
 
 ### Font
 
-I use Hack [Nerd Font](https://www.nerdfonts.com/) both in the terminal and in
-the status bar.  For the Japanese numbers I use Sazanami Mincho.
+I use Hack [Nerd Font](https://www.nerdfonts.com/) for the status bar and
+[Terminus Font](http://terminus-font.sourceforge.net/) in the terminal.  For
+the Japanese numbers I use Sazanami Mincho.
 
 ## Screenshots
 

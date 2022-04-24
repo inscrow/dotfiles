@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack Nerd Font:size=8";
+static char *font = "Terminus:size=8";
 static int borderpx = 2;
 
 /*
