@@ -39,3 +39,12 @@ function img2wall {
 	convert "$1" -resize 1366x768^ -gravity center \
 		-extent 1366x768 wall-"${1/\.*}".png
 }
+
+function mangapdf {
+	CHAPTER="$1"
+	PDF_TITLE="$(echo "$1" | tr '/' '_').pdf"
+	cd "$HOME/docs/Manga/$CHAPTER"
+	convert $(ls | sort -n) $PDF_TITLE
+	zathura $HOME/docs/Manga/$CHAPTER/$PDF_TITLE
+	cd -
+}
