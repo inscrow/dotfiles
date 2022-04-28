@@ -49,7 +49,7 @@ magenta   = "#b16286"
 green     = "#98971a"
 highlight = "#bd856a"
 red       = "#cc241d"
-white     = "#ffffff"
+white     = "#f3ece7"
 yellow    = "#d79921"
 
 # c.colors.webpage.darkmode.enabled = True

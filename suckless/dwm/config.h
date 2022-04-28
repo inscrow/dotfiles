@@ -10,8 +10,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "Hack Nerd Font:size=8", "Sazanami Mincho:size=8" };
 static const char dmenufont[]       = "Hack Nerd Font:size=8";
-static const char col_gray1[]       = "#ffffff";
-static const char col_gray2[]       = "#ffffff";
+static const char col_gray1[]       = "#f3ece7";
+static const char col_gray2[]       = "#f3ece7";
 static const char col_gray3[]       = "#000000";
 static const char col_gray4[]       = "#000000";
 static const char col_cyan[]        = "#bd856a";
