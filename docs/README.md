@@ -19,10 +19,7 @@ git checkout
 
 ### Colorscheme
 
-The colorscheme I use is a slight modification of
-[gruvbox](https://github.com/morhetz/gruvbox/), with white (`#ffffff`)
-background and black (`#000000`) foreground and with a pink (`#bd856a`) accent
-color.
+The colorscheme I'm using in the terminal is a simple monochrome theme I stole from [archcraft-os](https://github.com/archcraft-os/archcraft-openbox/blob/main/files/scripts/Kiss.sh#L63). I'm still using [gruvbox](https://github.com/morhetz/gruvbox) in neovim.
 
 ### Font
 
