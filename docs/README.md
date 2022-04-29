@@ -31,7 +31,7 @@ Mincho.
 
 ![](/docs/screenshots/no-windows.png)
 
-[Wallpaper](https://wallhaven.cc/w/1kj9o3)
+[Wallpaper](https://github.com/Haruno19/Haruno19/blob/main/configs/Wallpapers/kyoto%20streets.png)
 
 ![](/docs/screenshots/neofetch.png)
 
