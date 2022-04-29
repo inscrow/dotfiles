@@ -32,11 +32,11 @@ Mincho.
 
 ## Screenshots
 
-![](/docs/screenshots/screen-2022-04-17-19-33_full.png)
+![](/docs/screenshots/no-windows.png)
 
 [Wallpaper](https://wallhaven.cc/w/1kj9o3)
 
-![](/docs/screenshots/screen-2022-04-23-16-00_full_000.png)
+![](/docs/screenshots/neofetch.png)
 
 ## List of programs I use
 
