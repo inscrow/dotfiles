@@ -24,8 +24,8 @@ The colorscheme I'm using in the terminal is a simple monochrome theme I stole f
 ### Font
 
 I use Hack [Nerd Font](https://www.nerdfonts.com/) for the status bar and
-Monospace Regular in the terminal.  For the Japanese numbers I use Sazanami
-Mincho.
+Monospace Regular in the terminal.  For the Japanese numbers I use
+[AoyagiKouzanFontTOTF](https://opentype.jp/aoyagikouzanfontt.htm).
 
 ## Screenshots
 
