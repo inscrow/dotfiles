@@ -52,7 +52,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 /* display icon on left corner */
-static const char osicon[] = "";
+static const char osicon[] = "";
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
