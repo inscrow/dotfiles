@@ -1,0 +1,12 @@
+#!/bin/bash
+
+kodokan_search_pre="https://www.youtube.com/c/KODOKANJUDO/search?query="
+
+# generate query substring
+search_string=""
+for arg in "${@}"; do
+	search_string+="${arg}%20"
+done
+search_string="${search_string/%\%20}"
+
+mpv "$kodokan_search_pre$search_string"

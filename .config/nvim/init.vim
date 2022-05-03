@@ -28,7 +28,7 @@ augroup END
 
 augroup FTOptions
   au!
-  au BufRead *.md,*.txt set tw=79
+  au BufRead,BufNewFile *.md,*.txt set tw=79
 augroup END
 
 " add matchit plugin

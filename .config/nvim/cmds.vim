@@ -82,5 +82,8 @@ command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
 " Run Python script {{{1
 command! Py !python3 %
 " }}}
+" Compile current latex file into pdf {{{1
+command! Pdf !pdflatex %
+" }}}
 
 " vim: set ft=vim sw=2 fdm=marker:
