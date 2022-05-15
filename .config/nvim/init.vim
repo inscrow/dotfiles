@@ -29,6 +29,7 @@ augroup END
 augroup FTOptions
   au!
   au BufRead,BufNewFile *.md,*.txt set tw=79
+  au BufRead,BufNewFile *.js,*.html,*.css set sw=2
 augroup END
 
 " add matchit plugin
