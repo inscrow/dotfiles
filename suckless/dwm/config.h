@@ -8,8 +8,8 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "Hack Nerd Font:size=8", "AoyagiKouzanFontTOFT:size=8" };
-static const char dmenufont[]       = "Hack Nerd Font:size=8";
+static const char *fonts[]          = { "DejaVuSansMono Nerd Font Mono:size=8", "azukifontB:size=8" };
+static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
 static const char col_gray1[]       = "#f3ece7";
 static const char col_gray2[]       = "#f3ece7";
 static const char col_gray3[]       = "#000000";
