@@ -10,10 +10,10 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "DejaVuSansMono Nerd Font Mono:size=8", "azukifontB:size=8" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
-static const char col_gray1[]       = "#f3ece7";
-static const char col_gray2[]       = "#f3ece7";
-static const char col_gray3[]       = "#000000";
-static const char col_gray4[]       = "#000000";
+static const char col_gray1[]       = "#000000";
+static const char col_gray2[]       = "#000000";
+static const char col_gray3[]       = "#ffffff";
+static const char col_gray4[]       = "#ffffff";
 static const char col_cyan[]        = "#bd856a";
 static const unsigned int baralpha = 0x80;
 static const unsigned int borderalpha = 0x80;
