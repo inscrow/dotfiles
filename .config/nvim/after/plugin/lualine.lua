@@ -1,9 +1,9 @@
-local custom_gruvbox = require'lualine.themes.gruvbox_light'
-custom_gruvbox.normal.a.bg = '#bd856a'
+local custom_solarized = require'lualine.themes.solarized_dark'
+-- custom_solarized.normal.a.bg = '#bd856a'
 
 require('lualine').setup {
 	options = {
-		theme = custom_gruvbox,
+		theme = custom_solarized,
 		icons_enabled = false,
 	}
 }

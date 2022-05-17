@@ -4,12 +4,13 @@ runtime! cmds.vim " some commands I defined
 
 " fix some colorscheme issues
 function! MyHighlights() abort
-  hi Normal guibg=NONE guifg=#000000
+  hi Normal guibg=NONE guifg=#ffffff
   hi NonText guibg=NONE
+  hi LineNr guibg=NONE
 endfunction
 augroup FixColorscheme
   au!
-  au ColorScheme gruvbox call MyHighlights()
+  au ColorScheme NeoSolarized call MyHighlights()
 augroup END
 
 " file types
@@ -52,7 +53,7 @@ set wildmenu
 
 " colors
 syntax enable
-set termguicolors background=light
-colo gruvbox
+set termguicolors background=dark
+colo NeoSolarized
 set guicursor=a:blinkon100,i:ver20
 " vim:set ft=vim sw=2:
