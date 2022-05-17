@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unclutter &
-xcompmgr -n &
+picom --experimental-backends --backend glx &
 ~/.fehbg &
 touchpad_toggle.sh &
 dunst &
