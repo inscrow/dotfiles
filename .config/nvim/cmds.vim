@@ -85,5 +85,37 @@ command! Py !python3 %
 " Compile current latex file into pdf {{{1
 command! Pdf !pdflatex %
 " }}}
+" Switch words {{{1
+function SwitchWords(words) abort
+  " prepare the arguments
+  let items = split(a:words)
+  let w1 = items[0]
+  let w2 = items[1]
+
+  " disable wrapscan so search ends at end of file
+  let b_wrapscan = &wrapscan
+  let &wrapscan = 0
+
+  " go to beginning of file
+  norm gg0
+
+  " search pattern
+  let pat = w1 . '\|' . w2
+
+  " search and replace words
+  while search(pat)
+    if (expand('<cword>') == w1)
+      exe 'norm ciw' . w2
+    elseif (expand('<cword>') == w2)
+      exe 'norm ciw' . w1
+    endif
+  endwhile
+
+  " reset wrapscan option
+  let &wrapscan = b_wrapscan
+endfunction
+" FIXME function works, but command doesnt
+command! -nargs=1 SwitchWords :call SwitchWords(expand('<args>'))
+" }}}
 
 " vim: set ft=vim sw=2 fdm=marker:
