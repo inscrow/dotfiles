@@ -13,7 +13,7 @@ alias qutec='$EDITOR ~/.config/qutebrowser/config.py'
 alias rd=rmdir
 alias spc='$EDITOR ~/.config/startpage/index.html'
 alias src='source ~/.config/zsh/.zshrc'
-alias tmux="tmux list-sessions && tmux attach || tmux"
+alias t="tmux list-sessions && tmux attach || tmux"
 alias v=nvim
 alias vd='$EDITOR ~/.config/nvim/init.vim'
 
