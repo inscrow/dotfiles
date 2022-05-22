@@ -8,7 +8,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "DejaVuSansMono Nerd Font Mono:size=8", "azukifontB:size=8" };
+static const char *fonts[]          = { "monospace:pixelsize=10", "azukifontB:pixelsize=10" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#000000";
@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeNorm] = { OPAQUE, baralpha, OPAQUE },
 	[SchemeSel]  = { OPAQUE, OPAQUE, OPAQUE },
 };
 
@@ -51,7 +51,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 /* display icon on left corner */
-static const char osicon[] = "";
+static const char osicon[] = "";
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
