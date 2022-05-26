@@ -46,4 +46,4 @@ BAT="${BATS} $(cat /sys/class/power_supply/BAT0/capacity)"
 # date
 DATE="$(date +'%F %a %R')"
 
-echo "$LAYOUT $sep $TEMP $sep $VOL_IN $VOL_OUT $sep $WIFI $sep $BAT $sep $DATE"
+echo " $LAYOUT $sep $TEMP $sep $VOL_IN $VOL_OUT $sep $WIFI $sep $BAT $sep $DATE"
