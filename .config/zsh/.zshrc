@@ -6,13 +6,15 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 
 # aliases
 setopt complete_aliases
-alias dots='/usr/bin/git --git-dir=$HOME/dots --work-tree=$HOME'
+alias dots='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias gokyo='$EDITOR ~/docs/go-kyo-no-waza.txt'
+alias gtypist='gtypist -c 1,7'
 alias ls='ls --color=always'
 alias qutec='$EDITOR ~/.config/qutebrowser/config.py'
 alias rd=rmdir
 alias spc='$EDITOR ~/.config/startpage/index.html'
 alias src='source ~/.config/zsh/.zshrc'
-alias tmux="tmux list-sessions && tmux attach || tmux"
+alias t="tmux list-sessions && tmux attach || tmux"
 alias v=nvim
 alias vd='$EDITOR ~/.config/nvim/init.vim'
 

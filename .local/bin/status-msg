@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# dependencies: pulseaudio (pactl), xkblayout-state-git from AUR
+
 mute() {
 	s="$1"
 	default="@DEFAULT_$(echo $s | tr '[[:lower:]]' '[[:upper:]]')@"
@@ -12,10 +14,17 @@ vol() {
 	pactl get-$s-volume $default | grep -o -e '[[:digit:]]\+%' | uniq
 }
 
+layout() {
+	lang="$(xkblayout-state print %n)"
+	[ "$lang" = "English" ] && echo "us" || echo "it"
+}
+
 sep='|'
 
+LAYOUT=" $(layout)"
+
 # cpu temperature
-TEMP="﨎 $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+TEMP=" $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
 
 # volume in and out
 VOL_IN=""
@@ -37,4 +46,4 @@ BAT="${BATS} $(cat /sys/class/power_supply/BAT0/capacity)"
 # date
 DATE="$(date +'%F %a %R')"
 
-echo "$TEMP $sep $VOL_IN $VOL_OUT $sep $WIFI $sep $BAT $sep $DATE"
+echo " $LAYOUT $sep $TEMP $sep $VOL_IN $VOL_OUT $sep $WIFI $sep $BAT $sep $DATE"
