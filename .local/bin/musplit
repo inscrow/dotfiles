@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# handle missing arguments immediately
+[ ! -f "$1" ] && echo "Missing audio file"
+[ ! -f "$2" ] && echo "Missing timestamps file"
+
+audio="$1"
+timestamps="$2"
+
+# get number of tracks
+total="$(wc -l < "$2")"
+
+# process files
+while read -r x; do
+	end="$(echo "$x" | cut -d' ' -f1)"
+
+	[ -n "$start" ] &&
+		echo "$file from $start to $end" &&
+		ffmpeg -nostdin -y -loglevel -8 -i "$audio" -ss "$start" -to "$end" -vn -c copy "$file"
+
+	file="$(echo "$x" | cut -d' ' -f 2-).opus"
+	start="$end"
+done < "$2"
+# last track must be processed after the cycle
+echo "$file from $start to $end" &&
+	ffmpeg -nostdin -y -loglevel -8 -i "$audio" -ss "$start" -vn -c copy "$file"
