@@ -50,3 +50,11 @@ function mangapdf {
 	zathura $HOME/docs/Manga/$CHAPTER/$PDF_TITLE
 	cd -
 }
+
+# start tmux session in a specified dir and set
+function ts {
+	TRGT_DIR="$1"
+	TRGT_NAME=$(basename "$TRGT_DIR")
+	tmux new -d -s "$TRGT_NAME" -c "$TRGT_DIR"
+	[ "x$TMUX" = "x" ] || tmux switchc -t "$TRGT_NAME" && tmux attach -t "$TRGT_NAME"
+}
