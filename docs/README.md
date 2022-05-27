@@ -26,8 +26,8 @@ color.
 
 ### Font
 
-I use Hack [Nerd Font](https://www.nerdfonts.com/) for the status bar and
-Monospace Regular in the terminal.  For the Japanese numbers I use Sazanami
+I use [DejaVu nerd font](https://www.programmingfonts.org/#dejavu) for my
+statusbar and the standard version for the terminal.  Japanese font is Sazanami
 Mincho.
 
 ## Screenshots
