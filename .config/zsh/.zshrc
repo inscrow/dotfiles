@@ -8,6 +8,7 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 setopt complete_aliases
 alias dots='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias gokyo='$EDITOR ~/docs/go-kyo-no-waza.txt'
+alias gotour='$HOME/go/bin/tour'
 alias gtypist='gtypist -c 1,7'
 alias ls='ls --color=always'
 alias qutec='$EDITOR ~/.config/qutebrowser/config.py'
