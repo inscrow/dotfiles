@@ -19,12 +19,15 @@ git checkout
 
 ### Colorscheme
 
-The colorscheme I'm using in the terminal is a simple monochrome theme I stole from [archcraft-os](https://github.com/archcraft-os/archcraft-openbox/blob/main/files/scripts/Kiss.sh#L63). I'm still using [gruvbox](https://github.com/morhetz/gruvbox) in neovim.
+I'm using a slight modification of
+[solarized](https://ethanschoonover.com/solarized/) dark with a black
+background.  I'm using
+[NeoSolarized](https://github.com/overcache/NeoSolarized) theme for neovim.
 
 ### Font
 
-I use Hack [Nerd Font](https://www.nerdfonts.com/) for the status bar and
-Monospace Regular in the terminal.  For the Japanese numbers I use
+I use Monospace (DejaVu) [Nerd Font](https://www.nerdfonts.com/) for the status
+bar and Monospace Regular in the terminal.  For the Japanese numbers I use
 [AoyagiKouzanFontTOTF](https://opentype.jp/aoyagikouzanfontt.htm).
 
 ## Screenshots
@@ -47,14 +50,14 @@ Monospace Regular in the terminal.  For the Japanese numbers I use
 * Document Reader: [zathura](https://pwmt.org/projects/zathura/)
 * Notification Daemon: [dunst](https://dunst-project.org/)
 * Data Processing: [root](https://root.cern.ch/)
-* Compositor: xcompmgr
+* Compositor: picom
 * Multiplexer: [tmux](https://github.com/tmux/tmux)
 
 ## st patches
 
 * alpha
 * blinking cursor
-* gruvbox (light with some modification)
+* solarized (dark with some modification)
 * scrollback
 
 ## dwm patches
