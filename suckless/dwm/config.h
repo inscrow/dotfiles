@@ -2,19 +2,19 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "monospace:pixelsize=10", "azukifontB:pixelsize=10" };
+static const char *fonts[]          = { "scientifica:size=8", "azukifontB:pixelsize=8" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
-static const char col_gray1[]       = "#000000";
-static const char col_gray2[]       = "#000000";
-static const char col_gray3[]       = "#ffffff";
-static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#002b36";
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#282828";
+static const char col_gray3[]       = "#ebdbb2";
+static const char col_gray4[]       = "#282828";
+static const char col_cyan[]        = "#df6109";
 static const unsigned int baralpha = 0x80;
 static const unsigned int borderalpha = 0x80;
 static const char *colors[][3]      = {
@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, OPAQUE },
+	[SchemeNorm] = { OPAQUE, OPAQUE, OPAQUE },
 	[SchemeSel]  = { OPAQUE, OPAQUE, OPAQUE },
 };
 
