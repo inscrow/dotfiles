@@ -8,7 +8,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "scientifica:size=8", "azukifontB:pixelsize=8" };
+static const char *fonts[]          = { "scientifica:size=8", "MisakiGothic:pixelsize=8" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#282828";
@@ -51,7 +51,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 /* display icon on left corner */
-static const char osicon[] = "";
+static const char osicon[] = "ツ";
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
