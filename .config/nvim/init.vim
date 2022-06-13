@@ -3,15 +3,15 @@ runtime! plug.vim
 runtime! cmds.vim " some commands I defined
 
 " fix some colorscheme issues
-function! MyHighlights() abort
-  hi Normal guibg=NONE guifg=#ffffff
-  hi NonText guibg=NONE
-  hi LineNr guibg=NONE
-endfunction
-augroup FixColorscheme
-  au!
-  au ColorScheme NeoSolarized call MyHighlights()
-augroup END
+" function! MyHighlights() abort
+"   hi Normal guibg=NONE guifg=#ffffff
+"   hi NonText guibg=NONE
+"   hi LineNr guibg=NONE
+" endfunction
+" augroup FixColorscheme
+"   au!
+"   au ColorScheme gruvbox call MyHighlights()
+" augroup END
 
 " file types
 let g:do_filetype_lua = 1 " use filetype.lua (faster)
@@ -54,6 +54,9 @@ set wildmenu
 " colors
 syntax enable
 set termguicolors background=dark
-colo NeoSolarized
+colo gruvbox
 set guicursor=a:blinkon100,i:ver20
+
+" mappings
+inoremap  <c-w>
 " vim:set ft=vim sw=2:
