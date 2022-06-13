@@ -1,7 +1,7 @@
 #!/bin/bash
 
 unclutter &
-picom --experimental-backends --backend glx &
+# picom --experimental-backends --backend glx &
 touchpad_toggle.sh &
 dunst &
 
