@@ -6,9 +6,10 @@ hex2dec() {
 }
 
 img="$1"
-colors="$(convert $img -colors 8 -format "%c" histogram:info: | awk '{print $3}')"
+colors="$(convert $img -colors $2 -format "%c" histogram:info: | awk '{print $3}')"
 nc="\e[0m"
 
 for c in $colors; do
-	echo -e "\e[48;2;$(hex2dec $c)m $c $nc"
+	rgb="$(hex2dec $c)"
+	echo -e "\e[48;2;${rgb}m $c $nc $(color-wheel.py $rgb)"
 done

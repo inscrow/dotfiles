@@ -20,15 +20,22 @@ layout() {
 }
 
 sep='|'
+reset='^d^^c#282828^'
+red='^b#cc241d^'
+green='^b#98971a^'
+yellow='^b#d79921^'
+blue='^b#458588^'
+purple='^b#b16286^'
+aqua='^b#689d6a^'
 
-LAYOUT=" $(layout)"
+LAYOUT="${red} KB $(layout)"
 
 # cpu temperature
-TEMP=" $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
+TEMP="${green} T $(sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp)"
 
 # volume in and out
-VOL_IN=""
-VOL_OUT="墳"
+VOL_IN="MIC"
+VOL_OUT="VOL"
 
 # input 
 [ "$(mute source)" = "yes" ] && VOL_IN="$VOL_IN mute" || VOL_IN="$VOL_IN $(vol source)"
@@ -37,13 +44,13 @@ VOL_OUT="墳"
 [ "$(mute sink)" = "yes" ] && VOL_OUT="$VOL_OUT mute" || VOL_OUT="$VOL_OUT $(vol sink)"
 
 # wifi
-WIFI="直 $(cat /sys/class/net/wlp3s0/operstate)"
+WIFI="${blue} W $(cat /sys/class/net/wlp3s0/operstate)"
 
 # battery
 [[ "$(cat /sys/class/power_supply/BAT0/status)" = "Charging" ]] && BATS="CHR " || BATS=""
-BAT="${BATS} $(cat /sys/class/power_supply/BAT0/capacity)"
+BAT="${purple} ${BATS}BAT $(cat /sys/class/power_supply/BAT0/capacity)"
 
 # date
-DATE="$(date +'%F %a %R')"
+DATE="${aqua} $(date +'%F %a %R')"
 
-echo " $LAYOUT $sep $TEMP $sep $VOL_IN $VOL_OUT $sep $WIFI $sep $BAT $sep $DATE"
+echo "$reset $LAYOUT $reset $TEMP $reset ${yellow} $VOL_IN $VOL_OUT $reset $WIFI $reset $BAT $reset $DATE"
