@@ -83,7 +83,14 @@ command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
 command! Py !python3 %
 " }}}
 " Compile current latex file into pdf {{{1
-command! Pdf !pdflatex %
+function CompilePdf() abort
+  if &ft == 'markdown'
+    exe '!pandoc -s -o ' . expand('%:r') . '.pdf ' . expand('%')
+  elseif &ft == 'latex'
+    exe '!pdflatex ' . expand('%')
+  endif
+endfunction
+command! Pdf call CompilePdf()
 " }}}
 " Switch words {{{1
 function SwitchWords(words) abort
@@ -95,6 +102,9 @@ function SwitchWords(words) abort
   " disable wrapscan so search ends at end of file
   let b_wrapscan = &wrapscan
   let &wrapscan = 0
+
+  " save current position in file
+  let pos = winsaveview()
 
   " go to beginning of file
   norm gg0
@@ -113,8 +123,11 @@ function SwitchWords(words) abort
 
   " reset wrapscan option
   let &wrapscan = b_wrapscan
+
+  " reset position
+  call winrestview(pos)
 endfunction
-" FIXME function works, but command doesnt
+" command works like ':SwitchWords word1 word2'
 command! -nargs=1 SwitchWords :call SwitchWords(expand('<args>'))
 " }}}
 

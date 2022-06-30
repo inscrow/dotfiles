@@ -13,7 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips'
 
 if has('nvim')
-  Plug 'ellisonleao/gruvbox.nvim'
+  Plug '~/source/poke.nvim'
   Plug 'mhinz/vim-startify'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
