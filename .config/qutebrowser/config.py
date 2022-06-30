@@ -8,7 +8,7 @@ c.aliases = {
 }
 
 # don't show scrollbars
-c.scrolling.bar = "never"
+c.scrolling.bar = "when-searching"
 
 c.content.geolocation = False
 
@@ -44,17 +44,19 @@ config.bind(';f', 'hint links tab-bg')
 config.bind('<Ctrl-l>', 'search')
 
 # colors
-c.window.transparent = True # enable transparency
+# c.window.transparent = True # enable transparency
 
-white     = "#ebdbb2"
-magenta   = "#b16286"
-green     = "#98971a"
-highlight = "#df6109"
-red       = "#cc241d"
-black     = "#282828"
-yellow    = "#d79921"
+highlight = "#eda362"
+black = "#24231e"
+red = "#de5632"
+green = "#4ca559"
+yellow = "#feac53"
+blue = "#586c93"
+magenta = "#9e73a5"
+cyan = "#9aa8df"
+white = "#fdfcfc"
 
-alpha = 0.55
+alpha = 0.55 if c.window.transparent else 1
 alpha = "" + hex(int(alpha * 0xff))
 transBG = "#" + alpha[2:] + "282828"
 

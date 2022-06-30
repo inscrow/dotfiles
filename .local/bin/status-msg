@@ -20,13 +20,13 @@ layout() {
 }
 
 sep='|'
-reset='^d^^c#282828^'
-red='^b#cc241d^'
-green='^b#98971a^'
-yellow='^b#d79921^'
-blue='^b#458588^'
-purple='^b#b16286^'
-aqua='^b#689d6a^'
+reset='^d^^c#24231e^'
+red='^b#de5632^'
+green='^b#4ca559^'
+yellow='^b#feac53^'
+blue='^b#586c9e^'
+purple='^b#9e73a5^'
+aqua='^b#9aa8df^'
 
 LAYOUT="${red} KB $(layout)"
 
