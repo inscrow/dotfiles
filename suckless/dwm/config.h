@@ -10,11 +10,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "scientifica:size=8", "MisakiGothic:pixelsize=8" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#282828";
-static const char col_gray3[]       = "#ebdbb2";
-static const char col_gray4[]       = "#282828";
-static const char col_cyan[]        = "#df6109";
+static const char col_gray1[]       = "#24231e";
+static const char col_gray2[]       = "#24231e";
+static const char col_gray3[]       = "#fdfcfc";
+static const char col_gray4[]       = "#24231e";
+static const char col_cyan[]        = "#eda362";
 static const unsigned int baralpha = 0x80;
 static const unsigned int borderalpha = 0x80;
 static const char *colors[][3]      = {
