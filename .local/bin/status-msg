@@ -20,13 +20,13 @@ layout() {
 }
 
 sep='|'
-reset='^d^^c#24231e^'
-red='^b#de5632^'
-green='^b#4ca559^'
-yellow='^b#feac53^'
-blue='^b#586c9e^'
-purple='^b#9e73a5^'
-aqua='^b#9aa8df^'
+reset='^d^^c#002b36^'
+red='^b#dc322f^'
+green='^b#859900^'
+yellow='^b#b58900^'
+blue='^b#268bd2^'
+purple='^b#d33682^'
+aqua='^b#2aa198^'
 
 LAYOUT="${red} KB $(layout)"
 
@@ -44,13 +44,13 @@ VOL_OUT="VOL"
 [ "$(mute sink)" = "yes" ] && VOL_OUT="$VOL_OUT mute" || VOL_OUT="$VOL_OUT $(vol sink)"
 
 # wifi
-WIFI="${blue} W $(cat /sys/class/net/wlp3s0/operstate)"
+WIFI="${aqua} W $(cat /sys/class/net/wlp3s0/operstate)"
 
 # battery
 [[ "$(cat /sys/class/power_supply/BAT0/status)" = "Charging" ]] && BATS="CHR " || BATS=""
 BAT="${purple} ${BATS}BAT $(cat /sys/class/power_supply/BAT0/capacity)"
 
 # date
-DATE="${aqua} $(date +'%F %a %R')"
+DATE="${blue} $(date +'%F %a %R')"
 
 echo "$reset $LAYOUT $reset $TEMP $reset ${yellow} $VOL_IN $VOL_OUT $reset $WIFI $reset $BAT $reset $DATE"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+gradient="$1"
+filename="$2"
+
+# some sizes and positions
+w=1366
+h=768
+
+magick -size "$w"x"$h" \
+	-define gradient:direction=East \
+	gradient:"$gradient" "$filename"

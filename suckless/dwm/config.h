@@ -10,11 +10,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "scientifica:size=8", "MisakiGothic:pixelsize=8" };
 static const char dmenufont[]       = "DejaVuSansMono Nerd Font Mono:size=8";
-static const char col_gray1[]       = "#24231e";
-static const char col_gray2[]       = "#24231e";
-static const char col_gray3[]       = "#fdfcfc";
-static const char col_gray4[]       = "#24231e";
-static const char col_cyan[]        = "#eda362";
+static const char col_gray1[]       = "#002b36";
+static const char col_gray2[]       = "#002b36";
+static const char col_gray3[]       = "#839496";
+static const char col_gray4[]       = "#002b36";
+static const char col_cyan[]        = "#dc322f";
 static const unsigned int baralpha = 0x80;
 static const unsigned int borderalpha = 0x80;
 static const char *colors[][3]      = {
@@ -38,7 +38,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title      tags mask     isfloating   isterminal  noswallow  monitor */
 	{ "qutebrowser", NULL,    NULL,      1 << 1,         0,         0,           0,          -1 },
-	{ "Gimp",        NULL,    NULL,      1 << 8,         1,         0,           0,          -1 },
+	{ "Gimp",        NULL,    NULL,      1 << 7,         1,         0,           0,          -1 },
 	{ "ROOT",        NULL,    NULL,         0,           1,         0,           1,          -1 },
 	{ "St",          NULL,    NULL,         0,           0,         1,           0,          -1 },
 	{ "st-256color", NULL,    NULL,         0,           0,         1,           0,          -1 },
@@ -61,7 +61,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \

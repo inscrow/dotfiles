@@ -1,0 +1,15 @@
+#!/bin/bash
+
+GOKYO_FILE=$HOME/docs/go-kyo-no-waza.txt
+
+L_CNT=$(grep -c "[X]" "$GOKYO_FILE")
+R_CNT=$(grep -c "[\]" "$GOKYO_FILE")
+L_TECH=$(grep -m $(( $L_CNT - 1 )) "[X]" "$GOKYO_FILE")
+R_TECH=$(grep -m $(( $L_CNT - 1 )) "[\]" "$GOKYO_FILE")
+
+cat <<EOF
+Tecniche apprese ($(( $L_CNT - 1))):
+$L_TECH
+Tecniche da rivedere ($(($R_CNT - 1))):
+$R_TECH
+EOF

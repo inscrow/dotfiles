@@ -46,19 +46,19 @@ config.bind('<Ctrl-l>', 'search')
 # colors
 # c.window.transparent = True # enable transparency
 
-highlight = "#eda362"
-black = "#24231e"
-red = "#de5632"
-green = "#4ca559"
-yellow = "#feac53"
-blue = "#586c93"
-magenta = "#9e73a5"
-cyan = "#9aa8df"
-white = "#fdfcfc"
+highlight = "#073642"
+black     = "#002b36"
+red       = "#f2448b"
+green     = "#9cd162"
+yellow    = "#ffc85b"
+blue      = "#eba4ac"
+magenta   = "#d9bcef"
+cyan      = "#87c095"
+white     = "#839496"
 
 alpha = 0.55 if c.window.transparent else 1
 alpha = "" + hex(int(alpha * 0xff))
-transBG = "#" + alpha[2:] + "282828"
+transBG = "#" + alpha[2:] + "002b36"
 
 # c.colors.webpage.bg = transBG
 c.colors.webpage.darkmode.enabled = True

@@ -12,6 +12,7 @@ alias gotour='$HOME/go/bin/tour'
 alias gtypist='gtypist -c 1,7'
 alias ls='ls --color=always'
 alias qutec='$EDITOR ~/.config/qutebrowser/config.py'
+alias pc='pokemon-colorscripts'
 alias rd=rmdir
 alias spc='$EDITOR ~/.config/startpage/index.html'
 alias src='source ~/.config/zsh/.zshrc'
@@ -36,6 +37,7 @@ eval "$(zoxide init zsh)"
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^E" edit-command-line
+bindkey  backward-delete-word
 
 # functions
 function img2wall {

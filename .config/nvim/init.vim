@@ -5,12 +5,12 @@ runtime! cmds.vim " some commands I defined
 " fix some colorscheme issues
 function! MyHighlights() abort
   hi Normal guibg=NONE
-  hi NonText guibg=NONE
+  hi EndOfBuffer guibg=NONE
   hi LineNr guibg=NONE
 endfunction
 augroup FixColorscheme
   au!
-  au ColorScheme poke call MyHighlights()
+  au ColorScheme solarized call MyHighlights()
 augroup END
 
 " file types
@@ -29,8 +29,8 @@ augroup END
 
 augroup FTOptions
   au!
-  au BufRead,BufNewFile *.md,*.txt set tw=79
-  au BufRead,BufNewFile *.js,*.html,*.css set sw=2
+  au BufRead,BufNewFile *.md,*.txt set tw=79 sw=4
+  au BufRead,BufNewFile *.js,*.html,*.css,*.lua set sw=2
 augroup END
 
 " add matchit plugin
@@ -54,7 +54,7 @@ set wildmenu
 " colors
 syntax enable
 set termguicolors background=dark
-colo poke
+colo solarized
 set guicursor=a:blinkon100,i:ver20
 
 " mappings

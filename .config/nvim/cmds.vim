@@ -83,14 +83,14 @@ command! Gpp !g++ % -o %:r -Wall -Wextra -pedantic
 command! Py !python3 %
 " }}}
 " Compile current latex file into pdf {{{1
-function CompilePdf() abort
+function CompilePdf(options) abort
   if &ft == 'markdown'
-    exe '!pandoc -s -o ' . expand('%:r') . '.pdf ' . expand('%')
+    exe '!pandoc ' . expand(a:options) . ' -s -o ' . expand('%:r') . '.pdf ' . expand('%')
   elseif &ft == 'latex'
-    exe '!pdflatex ' . expand('%')
+    exe '!pdflatex ' . expand(a:options) . ' ' . expand('%')
   endif
 endfunction
-command! Pdf call CompilePdf()
+command! -nargs=? Pdf call CompilePdf('<args>')
 " }}}
 " Switch words {{{1
 function SwitchWords(words) abort
@@ -129,6 +129,9 @@ function SwitchWords(words) abort
 endfunction
 " command works like ':SwitchWords word1 word2'
 command! -nargs=1 SwitchWords :call SwitchWords(expand('<args>'))
+" }}}
+" git command {{{1
+command! -nargs=1 Git :!git <args>
 " }}}
 
 " vim: set ft=vim sw=2 fdm=marker:

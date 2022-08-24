@@ -11,14 +11,20 @@ call plug#begin()
 Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-sensible'
 Plug 'SirVer/ultisnips'
+Plug 'arzg/vim-substrata'
 
 if has('nvim')
-  Plug '~/source/poke.nvim'
+  Plug 'ishan9299/nvim-solarized-lua'
   Plug 'mhinz/vim-startify'
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'akinsho/bufferline.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  " treesitter modules
+  Plug 'nvim-treesitter/nvim-treesitter-refactor'
+  Plug 'windwp/nvim-ts-autotag'
 endif
 call plug#end()
 

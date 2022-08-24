@@ -98,31 +98,28 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* gruvbox dark */
-	/* 8 normal colors */
-	[0] = "#24231e", /* black   */
-	[1] = "#de5632", /* red     */
-	[2] = "#4ca559", /* green   */
-	[3] = "#feac53", /* yellow  */
-	[4] = "#586c93", /* blue    */
-	[5] = "#9e73a5", /* magenta */
-	[6] = "#9aa8df", /* cyan    */
-	[7] = "#fdfcfc", /* white   */
-
-	/* 8 bright colors */
-	[8]  = "#24231e", /* black   */
-	[9]  = "#de5632", /* red     */
-	[10] = "#4ca559", /* green   */
-	[11] = "#feac53", /* yellow  */
-	[12] = "#586c93", /* blue    */
-	[13] = "#9e73a5", /* magenta */
-	[14] = "#9aa8df", /* cyan    */
-	[15] = "#fdfcfc", /* white   */
+	/* solarized dark */
+	"#073642",  /*  0: black    */
+	"#dc322f",  /*  1: red      */
+	"#859900",  /*  2: green    */
+	"#b58900",  /*  3: yellow   */
+	"#268bd2",  /*  4: blue     */
+	"#d33682",  /*  5: magenta  */
+	"#2aa198",  /*  6: cyan     */
+	"#eee8d5",  /*  7: white    */
+	"#002b36",  /*  8: brblack  */
+	"#cb4b16",  /*  9: brred    */
+	"#586e75",  /* 10: brgreen  */
+	"#657b83",  /* 11: bryellow */
+	"#839496",  /* 12: brblue   */
+	"#6c71c4",  /* 13: brmagenta*/
+	"#93a1a1",  /* 14: brcyan   */
+	"#fdf6e3",  /* 15: brwhite  */
 	
 	[255] = 0,
 	/* special colors */
-	[256] = "#24231e", /* background */
-	[257] = "#fdfcfc", /* foreground */
+	[256] = "#002b36", /* background */
+	[257] = "#839496", /* foreground */
 };
 
 
